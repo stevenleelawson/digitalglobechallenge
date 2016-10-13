@@ -1,7 +1,62 @@
 body {
-  background-color: red;
+  /*background-color: red;*/
+
+}
+.mapPic {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.logos {
+  display: flex;
+  justify-content: space-around;
 }
 #mapid {
   height: 700px;
-  width: 1000px;
+  width: 50%;
+  margin-left: 10px;
+}
+#picture {
+  height: 700px;
+  width: 50%;
+  border: none;
+  position: relative;
+}
+.digiGlobe {
+  height: 30px;
+  margin-bottom: : 70px;
+}
+.tomnod {
+  height: 60px;
+}
+.power {
+  font-family: 'Nova Flat', cursive;
+  margin-left: 10px;
+  color: hsl(199, 73%, 47%);
+}
+.placeholder {
+  position: absolute;
+  font-family: 'Nova Flat', cursive;
+  font-size: 50px;
+  height: 100px;
+  width: 400px;
+  margin-left: 400px;
+  margin-top: -200px;
+
+}
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    margin-left: 350px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

@@ -4,14 +4,35 @@
     <meta charset="utf-8">
     <title>Steven's Digital Globe Challenge</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
+
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="mapid" style="width: 600px; height 400px"></div>
-    <img id="picture" src="" alt="bleh" />
+
+
+    <div class="mapPic">
+      <div id="mapid"></div>
+      <div class="placeholder">
+        <p>
+          Click on the map to see a satellite image of anywhere in the world!
+        </p>
+
+      </div>
+      <div class="loader"></div>
+      <img id="picture" src="" alt="" />
+  </div>
     <script src="app.js"></script>
+  <footer>
+    <h2 class="power">Powered By</h2>
+    <div class="logos">
+      <img class="tomnod" src="http://www.zerosixright.com/wp-content/uploads/2014/03/Screen-Shot-2014-03-11-at-23.37.35-300x250.png" alt="" />
+      <img class="digiGlobe" src="http://www.un-spider.org/sites/default/files/131016_Foundation.jpg" alt="" />
+  </div>
+  </footer>
   </body>
 </html>

@@ -1,15 +1,18 @@
 $(document).ready(function(){
+  $('.loader').hide();
   var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(mymap);
   mymap.on('click', function(e) {
+    $('.placeholder').hide();
+    $('.loader').show();
     var lat = e.latlng.lat;
     var lng = e.latlng.lng;
-    console.log(lat, lng);
+
     var baseUrl = "https://galvanize-cors-proxy.herokuapp.com/http://mapperdev.tomnod.com/chip_api/chip/lat/" + lat +'/lng/' + lng
-    console.log(baseUrl);
+
     apiCall(baseUrl).then(function(photo){
 
 
@@ -21,7 +24,9 @@ $(document).ready(function(){
         console.log("Mistake, user!");
 
       }
-      })
+    }).then(function(event){
+      $('.loader').hide();
+    })
       });
     });
     function apiCall(baseURL) {
@@ -45,18 +50,6 @@ $(document).ready(function(){
           xhr.open('GET', baseURL);
           xhr.responseType = 'blob';
           xhr.send();
-          // $.ajax({
-          //   url: baseURL,
-          //   data: 'payload',
-          //   method: 'GET',
-          //   success: function(data) {
-          //     resolve(data)
-          //     console.log("it worked");
-          //   },
-          //   fail: function(err) {
-          //     reject(data)
-          //     console.log("error");
-          //   }
-          // });
+
         });
       }
