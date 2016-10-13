@@ -8,7 +8,7 @@ $(document).ready(function(){
     var lat = e.latlng.lat;
     var lng = e.latlng.lng;
     console.log(lat, lng);
-    var baseUrl = "http://galvanize-cors-proxy.herokuapp.com/http://mapperdev.tomnod.com/chip_api/chip/lat/" + lat +'/lng/' + lng
+    var baseUrl = "https://galvanize-cors-proxy.herokuapp.com/http://mapperdev.tomnod.com/chip_api/chip/lat/" + lat +'/lng/' + lng
     console.log(baseUrl);
     apiCall(baseUrl).then(function(photo){
 
